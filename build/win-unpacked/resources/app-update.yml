@@ -1,0 +1,5 @@
+owner: shanbhxg
+repo: todo
+provider: github
+releaseType: draft
+updaterCacheDirName: todo-updater

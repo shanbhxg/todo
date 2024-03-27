@@ -4,13 +4,39 @@
   "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "electron ."
+    "start": "electron .",
+    "build": "electron-builder"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "electron": "^6.1.2",
+    "electron-updater": "^6.1.8",
     "react": "^18.2.0"
+  },
+  "devDependencies": {
+    "electron": "^6.1.2",
+    "electron-builder": "^22.12.1"
+  },
+  "build": {
+    "appId": "com.example.todo",
+    "productName": "TodoApp",
+    "directories": {
+      "output": "build"
+    },
+    "files": [
+      "main.js",
+      "index.html",
+      "index.js",
+      "package.json"
+    ],
+    "publish": [
+      {
+        "provider": "github",
+        "owner": "shanbhxg",
+        "repo": "todo",
+        "releaseType": "draft"
+      }
+    ]
   },
   "description": ""
 }
